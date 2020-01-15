@@ -1,0 +1,67 @@
+
+h1, h2{
+    color : #48A7C2;
+    font-family : "Trebuchet MS",sans-serif;
+}
+
+p, ul, ol , dl{
+    color : black;
+    font-family : "Times New Roman",sans-serif;
+    font-weight : 500;
+}
+
+p,ul, ol {
+    font-size : 18px;
+   
+}
+
+p:first-letter{
+    font-size: 32px;
+}
+
+body {
+    background-color : #f4f4f4;
+}
+
+a {
+    color : red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;   
+}
+strong {
+    color : yellow;
+}
+
+dl {
+	margin-left : 61px;
+}
+dt {
+    color : yellow;
+}
+
+dd {
+    font-size : 15px;
+}
+
+.favorites img {
+    width: 120px;
+    height: auto;
+    filter: grayscale(100%);
+}
+.favorites img:hover {
+    filter: none;
+}
+.movies ul li, .books ul li {
+    list-style: none;
+    width: 33%;
+    float: left;
+}
+.tvs ul li {
+    width: 33%;
+    margin: 0 auto;
+    float: left;
+    list-style: none;
+}
