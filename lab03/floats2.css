@@ -1,0 +1,51 @@
+#a, #b {
+    width: 100px;
+    height: 100px;
+    font: 30pt bold Helvetica, Arial, sans-serif;
+    line-height: 100px;
+    text-align: center;
+}
+#a {
+    background-color: lightblue;
+    float: left;
+}
+
+#b {
+    background-color: pink;
+    float: right;
+}
+
+#c { background-color: lightgray; }
+.outer{
+    width: 400px;
+    height: 150px;
+    overflow-y: scroll;
+}
+/*
+#a {
+    background-color: lightblue;
+    float: left;
+}
+#b {
+    background-color: pink;
+    clear: left;
+    float: right;
+}
+ */
+/*
+#a {
+    background-color: lightblue;
+    float: left;
+}
+#b {
+    background-color: pink;
+    clear: left;
+    float: right;
+}
+#c {
+    background-color: lightgray;
+    clear: left;
+    text-align: right;
+}
+ */
+
