@@ -1,0 +1,15 @@
+#outer{
+    background: lightgray;
+    overflow: hidden;
+    padding: 10px;
+    width: 400px;
+}
+#column1, #column2  {
+    background-color: lightblue;
+    float: right;
+    margin-left: 10px;
+    width: 150px;
+}
+h1{
+    background: yellow;
+}
