@@ -1,13 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
-/* Create two equal columns that floats next to each other */
 .column1,.column2,.column3 {
     float: left;
-    width: 33%;
+    width: 30%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 300px;
 }
 .column1{
     background-color: gray;
@@ -18,14 +16,12 @@
 .column3{
     background-color: gray;
 }
-
-/* Clear floats after the columns */
 .row1:after {
     content: "";
     display: table;
     clear: both;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 
     .column1,.column2{
         width:50%;
@@ -34,7 +30,6 @@
         width:100%;
     }
 }
-/*html and css validation icons on a bottom right fixed position and is opaque */
 #validation {
     position: fixed;
     bottom: 10px;
