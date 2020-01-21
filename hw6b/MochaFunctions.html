@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Dear Professor,
+ The link to my home page is https://mhaddis.github.io/cs472-Homework/.
+ to finish the homework it took me 1:30. While doing this homework I had the chance to practice on different methods of Java Script like reduce and filter
+ the other thing I noticed is that using the arrow function helps to write clear and simple code. -->
+
+<head>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+<script src="MochaFunctions.js">    </script>
+
+<!-- the script with tests (describe, it...) -->
+<!-- <script src="test.js"></script>
+<script src="calculatorTest.js"></script> -->
+
+<!-- the element with id="mocha" will contain test results -->
+<div id="mocha"></div>
+
+<!-- run tests! -->
+<script>
+    mocha.run();
+</script>
+</body>
+</html>
