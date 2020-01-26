@@ -25,8 +25,7 @@ Array.prototype.bubbleSort = function () {
 console.log([6, 4, 0, 3, -2, 1].bubbleSort());
 
 //3...function Constructor
-console.log(" \n 3...................")
-console.log("\n .....................using function Constructor.....................................")
+console.log("\n 3...............using function Constructor...............")
 
 function Person(name) {
     this.name = name;
@@ -37,7 +36,7 @@ Person.prototype.teach = function (subject) {
 }
 console.log(teacher.teach(" WAP"));
 // Object.Create
-console.log("\n .......................Using Object Prototype Aproach...............................")
+console.log("\n ........Using Object Prototype Aproach...................")
 
 const person = function () {
     return {name: "Paul"}
@@ -50,8 +49,7 @@ teach.course = function (subject) {
 console.log(teach.course("WAP"));
 
 //4..a... Object prototype Aproach
-console.log("\n 4...................")
-console.log("\n .......................Using Object Prototype Aproach............................")
+console.log("\n 4 ...........Using Object Prototype Aproach............")
 const Persons = {
     name: "Unknown", age: 20, greeting: function () {
         return "Greetings: my name is" + this.name + "and I am " + name.age + "years Old"
@@ -83,7 +81,7 @@ const student = Object.create(Student);
 console.log(professor.salute());
 console.log(student.greeting());
 // 4..b....function Constructor Aproach
-console.log(" \n ..........................using function Constructor aproach.....................")
+console.log(" \n ......using function Constructor aproach.............")
 
 function Perrson(name, age) {
     this.name = name;
