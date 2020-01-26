@@ -23,3 +23,10 @@ function filter(arr, filterFunc) {
 }
 oddArr = arr.filter(num => num % 2 === 0);
 console.log(oddArr); // prints [2, 4]
+
+function reduce(arr, reducer, initialValue) {
+    let accumulator = initialValue === undefined ? 0 : initialValue;
+for(let i=0;i<arr.length;i++)  {
+    accumulator = reducer(accumulator, arr[i], i, arr);    }
+    return accumulator;
+}
