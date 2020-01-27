@@ -26,12 +26,11 @@ console.log(" \n 2...................")
             }
         }
     }
-
     return this;
 }
 describe("InheritanceMochaTesting", function() {
     it("Bubble Sort", function () {
-        assert.equal([6, 4, 0, 3, -2, 1].bubbleSort(), [-2, 0, 1, 3, 4, 6]);
+        assert.equal([6, 4, 0, 3, -2, 1].bubbleSort().toString(), '-2,0,1,3,4,6' );
     });
 });
 
