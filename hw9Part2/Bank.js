@@ -76,10 +76,10 @@ class Bank {
      */
     endOfMonth() {
         let report = "";
-        for (const act of this._accounts) {
-            let msg = act.endOfMonth();
-            if (msg !== "") {
-                report += msg + "\n";
+        for (const account of this._accounts) {
+            let message = account.endOfMonth();
+            if (message !== "") {
+                report += message + "\n";
             }
         }
         return report;
