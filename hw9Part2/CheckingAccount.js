@@ -35,24 +35,24 @@ class CheckingAccount extends Account {
      * @param amount of withdraw
      */
     withdraw(amount) {
-        if (amount > this._balance) {
-            let over = this._balance - amount;
-            if (over > this._overdraft) {
-                throw new RangeError("Overdraft amount is exceeded");
-            } else {
-                this._balance -= amount;
-            }
+        if (amount <= 0) {
+            throw RangeError("Withdraw amount has to be greater than zero");
         }
+        if (amount > this._balance + this._overdraft) {
+            throw new Error("Overdraft amount is exceeded");
+        }
+        this._balance -= amount;
     }
 
     toString() {
-        return ("Checking account " + this._number + ": balance " + this._balance + " overdraft: " + this._overdraft);
+        return ("Checking account " + this._number + ": balance: " + this._balance + " overdraft: " + this._overdraft);
     }
 
     endOfMonth() {
-        if (this._balance <= 0) {
-            console.log("Warning, low balance checking account: " + this._number + " balance: " +
-                this._balance + " overdraft limit: " + this._overdraft);
+        let message = "";
+        if (this._balance < 0) {
+            message = "Warning, low balance " + this.toString();
         }
+        return message;
     }
 }
