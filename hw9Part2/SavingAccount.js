@@ -36,7 +36,7 @@ class SavingsAccount extends Account {
         const balance = super.getBalance();
         const intAmount = (balance * this._interest) / 100;
         super.deposit(intAmount);
-        return ("Savings account: " + this._number + " balance: " + this._balance + " interest: " + this._interest);
+        return ("Savings account 1: " + this._number + " balance: " + this._balance + " interest: " + this._interest);
     }
 
     /**
@@ -44,10 +44,11 @@ class SavingsAccount extends Account {
      * @returns {string}
      */
     toString() {
-        return ("Savings account " + this._number + ": balance " + this._balance + " interest: " + this._interest);
+        return ("SavingAccount " + this._number + ": balance: " + this._balance + " interest: " + this._interest);
     }
 
     endOfMonth() {
-        console.log(this.addInterest());
+        this.addInterest();
+        return "Interest added " + this.toString();
     }
 }
