@@ -180,7 +180,6 @@
                     assert.equal(bank.endOfMonth(), "Interest added SavingAccount 2: balance: 102.5 interest: 2.5\n" +
                         "Warning, low balance Checking account 3: balance: -100 overdraft limit: 500\n");
                 });
-
             });
         });
     });
