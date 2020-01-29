@@ -124,7 +124,65 @@
             });
         });
 
-    });
+//Test For Bank
+        describe("Bank Class", () => {
+            let bank = undefined;
+            describe("constructor()", () => {
+                it("creates a Bank object", () => {
+                    bank = new Bank();
+                    assert.equal(bank.constructor, Bank);
+                    assert.equal(bank._accounts.length, 0);
+                });
+            });
+            describe("addAccount()", () => {
+                it("adds an Account object to it array", () => {
+                    bank.addAccount();
+                    assert.equal(bank._accounts[0].getNumber(), 1);
+                    assert.equal(bank._accounts[0].getBalance(), 0);
+                });
+            });
+            describe("addSavingsAccount(interest)", () => {
+                it("adds an SavingsAccount object to it array", () => {
+                    bank.addSavingsAccount(2.5);
+                    assert.equal(bank._accounts[1].getNumber(), 2);
+                    assert.equal(bank._accounts[1].getBalance(), 255);
+                    assert.equal(bank._accounts[1].getInterest(), 2.5);
+                });
+            });
+            describe("addCheckingAccount(overdraft)", () => {
+                it("adds an CheckingAccount object to it array", () => {
+                    bank.addCheckingAccount(500);
+                    assert.equal(bank._accounts[2].getNumber(), 3);
+                    assert.equal(bank._accounts[2].getBalance(), 0);
+                    assert.equal(bank._accounts[2].getOverdraft(), 500);
+                });
+            });
+            describe("closeAccount(number)", () => {
+                it("closes the account with the given number", () => {
+                    bank.closeAccount(1);
+                    assert.equal(bank._accounts.length, 2);
+                    assert.equal(bank._accounts[1].getNumber(), 3);
+                    assert.equal(bank._accounts[1].getBalance(), 0);
+                    assert.equal(bank._accounts[1].getOverdraft(), 500);
+                });
+            });
+            describe("accountReport()", () => {
+                it("returns a string describing all accounts", () => {
+                    assert.equal(bank.accountReport(), 'SavingAccount 2: balance: 255 interest: 2.5\n' +
+                        'Checking account 3: balance: 0 overdraft: 500\n');
+                });
+            });
+            describe("endOfMonth()", ()=>{
+                it("returns a string with actions related to the accounts", ()=>{
+                    bank._accounts[0].deposit(100);
+                    bank._accounts[1].withdraw(100);
+                    bank.addAccount();
+                    assert.equal(bank.endOfMonth(), "Interest added SavingAccount 2: balance: 102.5 interest: 2.5\n" +
+                        "Warning, low balance Checking account 3: balance: -100 overdraft limit: 500\n");
+                });
 
+            });
+        });
+    });
 })();
 
