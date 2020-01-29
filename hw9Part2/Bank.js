@@ -7,7 +7,7 @@ class Bank {
      * constructor next number and accounts
      */
     constructor() {
-        this._nextNumber = 1000;
+        this._nextNumber = 1;
         this._accounts = [];
     }
 
@@ -64,17 +64,24 @@ class Bank {
      *
      */
     accountReport() {
-        for (let accIndex in this._accounts) {
-            console.log(this._accounts[accIndex].toString());
+        let report = "";
+        for (const act of this._accounts) {
+            report += act.toString() + "\n";
         }
+        return report;
     }
-
     /**
-     *
+     * Calls endOfMonth on all accounts
+     * @returns {string} the report
      */
     endOfMonth() {
-        for (let accIndex in this._accounts) {
-            this._accounts[accIndex].endOfMonth();
+        let report = "";
+        for (const act of this._accounts) {
+            let msg = act.endOfMonth();
+            if (msg !== "") {
+                report += msg + "\n";
+            }
         }
+        return report;
     }
 }
